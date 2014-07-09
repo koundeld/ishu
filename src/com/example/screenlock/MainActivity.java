@@ -45,6 +45,7 @@ public class MainActivity extends Activity {
 				boolean isAdmin = mDevicePolicyManager.isAdminActive(mComponentName);  
 	            if (isAdmin) {  
 	                mDevicePolicyManager.lockNow();  
+	                finish();
 	            }else{
 	                Toast.makeText(getApplicationContext(), "configuring....", Toast.LENGTH_SHORT).show();
 	            }
